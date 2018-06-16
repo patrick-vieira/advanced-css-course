@@ -1,0 +1,9 @@
+
+@mixin clearfix {
+    //clearfix para usar floats 
+    &::after {
+      content:"";
+      clear:both;
+      display:table;
+    }
+  }
