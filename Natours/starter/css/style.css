@@ -9,7 +9,7 @@
 html {
   /* 10px (minha base) 1rem = 10px
     dividido por 16px (fonte padrão do navegador */
-  font-size: 62.5%; }
+  font-size: 75%; }
 
 body {
   box-sizing: border-box; }
@@ -94,10 +94,26 @@ body {
     transform: skewX(20deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.42); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
@@ -145,6 +161,52 @@ body {
   animation-timing-function: ease-out;
   animation-delay: .7s;
   animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: .1rem solid;
+  padding: .3rem;
+  transition: all .4s; }
+
+.btn-text:hover {
+  color: #fff;
+  background-color: #55c57a;
+  box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+    position: absolute;
+    transition: all .2s;
+    outline-offset: 1.5rem;
+    z-index: 10; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0rem;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 10rem;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.1) translateY(-1.4rem);
+      z-index: 20;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8); }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .header {
   height: 95vh;
